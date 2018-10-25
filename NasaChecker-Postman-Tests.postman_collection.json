@@ -1,0 +1,157 @@
+{
+	"info": {
+		"_postman_id": "0099e036-85f9-4857-a2cc-52f1c73132d4",
+		"name": "NasaChecker-Postman-Tests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": " https://de30y4xjna.execute-api.us-west-1.amazonaws.com/test/proxy?detailed=true&api_key=cl9pgVQvgkuBDICjPH2oMJoomxgxaqWJemx1B14U",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://e30y4xjna.execute-api.us-west-1.amazonaws.com/test/proxy?detailed=true&api_key=cl9pgVQvgkuBDICjPH2oMJoomxgxaqWJemx1B14U",
+					"protocol": "https",
+					"host": [
+						"e30y4xjna",
+						"execute-api",
+						"us-west-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"test",
+						"proxy"
+					],
+					"query": [
+						{
+							"key": "detailed",
+							"value": "true"
+						},
+						{
+							"key": "api_key",
+							"value": "cl9pgVQvgkuBDICjPH2oMJoomxgxaqWJemx1B14U"
+						}
+					]
+				},
+				"description": "This SHOULD work great and return the number of Near Earth Objects NASA is keeping its eyes on for the current day.  It doesn't.   Haven't figured out why.   It claims bad API_KEY.   So does invoking the lambda function through AWS API Gateway Test.   But invoking the lambda directly through the Lambda test function works fine.   I'm doing something very basic wrong, but not sure what at this point."
+			},
+			"response": [
+				{
+					"name": " https://de30y4xjna.execute-api.us-west-1.amazonaws.com/test/proxy?detailed=true&api_key=cl9pgVQvgkuBDICjPH2oMJoomxgxaqWJemx1B14U",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://de30y4xjna.execute-api.us-west-1.amazonaws.com/test/proxy?detailed=true&api_key=cl9pgVQvgkuBDICjPH2oMJoomxgxaqWJemx1B14U",
+							"protocol": "https",
+							"host": [
+								"de30y4xjna",
+								"execute-api",
+								"us-west-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"test",
+								"proxy"
+							],
+							"query": [
+								{
+									"key": "detailed",
+									"value": "true"
+								},
+								{
+									"key": "api_key",
+									"value": "cl9pgVQvgkuBDICjPH2oMJoomxgxaqWJemx1B14U"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 25 Oct 2018 08:11:50 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "45"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-amzn-RequestId",
+							"value": "a01d695b-d82d-11e8-b983-7f5b1a46c0db"
+						},
+						{
+							"key": "x-amz-apigw-id",
+							"value": "PUAfCHNeSK4Fc-Q="
+						},
+						{
+							"key": "X-Amzn-Trace-Id",
+							"value": "Root=1-5bd17ac6-5082ea6088be1ac85d368a20;Sampled=0"
+						}
+					],
+					"cookie": [],
+					"body": "Uh oh, unexpected error.  Maybe Bad API key?\n"
+				}
+			]
+		},
+		{
+			"name": " https://de30y4xjna.execute-api.us-west-1.amazonaws.com/test/proxy?detailed=true&api_key=cl9pgVQvgkuBDICjPH2oMJoomxgxaqWJemx1B14",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://de30y4xjna.execute-api.us-west-1.amazonaws.com/test/proxy?detailed=true&api_key=cl9pgVQvgkuBDICjPH2oMJoomxgxaqWJemx1B14",
+					"protocol": "https",
+					"host": [
+						"de30y4xjna",
+						"execute-api",
+						"us-west-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"test",
+						"proxy"
+					],
+					"query": [
+						{
+							"key": "detailed",
+							"value": "true"
+						},
+						{
+							"key": "api_key",
+							"value": "cl9pgVQvgkuBDICjPH2oMJoomxgxaqWJemx1B14"
+						}
+					]
+				},
+				"description": "This test should return an error indicating that the API key was badly formed.  "
+			},
+			"response": []
+		}
+	]
+}
